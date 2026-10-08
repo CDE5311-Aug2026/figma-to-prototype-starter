@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "../styles/tokens.generated.css";
+
+/* Design tokens live in tokens/tokens.json -> src/styles/tokens.generated.css.
+   Only put global base styles here. Never hard-code colours or sizes. */
+
+@layer base {
+  html {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+}
